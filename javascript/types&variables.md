@@ -65,3 +65,64 @@ const LOGIN_SUCCESS_MESSAGE = "Ласкаво просимо!";
 Абсолютна більшість змінних – константи в іншому сенсі, вони просто не змінюють значення після присвоєння. Але, у різних запусках скрипту, це значення може бути різним. Імена таких змінних записують за допомогою формату `camelCase`.
 
 ## Примітивні типи
+
+`Number` - цілі числа і числа з плаваючою комою (крапкою).
+
+```ts
+const age = 20;
+const points = 15.8;
+```
+
+`String` - рядки, послідовність з нуля або більше символів. Рядок починається і закінчується одинарними `'`, або подвійними лапками `"`.
+
+```ts
+const username = "Mango";
+const description = "JavaSript для початківців";
+```
+
+`Boolean` - логічний тип даних, прапорці стану. Всього два значення: `true` і `false`. Наприклад, на запитання чи увімкнено світло в кімнаті, можна відповісти так `(true)` або ні `(false)`.
+
+`true` — так, вірно, істина, `1`
+`false` — ні, невірно, неправда, `0`
+Зверніть увагу на імена змінних, що містять буль. Вони ставлять запитання, і відповідь на нього - так або ні.
+
+```ts
+const isLoggedIn = true;
+const canMerge = false;
+const hasChildren = true;
+const isModalOpen = false;
+```
+
+`null` - особливе значення, яке по суті означає `ніщо`. Використовується в тих ситуаціях, коли необхідно явно вказати порожнечу. Наприклад, якщо користувач нічого не вибрав, то можна сказати що значення `null`.
+
+```ts
+let selectedProduct = null;
+```
+
+`undefined` - ще одне спеціальне значення. За замовчуванням, коли змінна оголошується, але не ініціалізується, її значення не визначено, їй присвоюється `undefined`.
+
+```ts
+let username;
+console.log(username); // undefined
+```
+
+## Оператор `typeof`
+
+Використовується для отримання типу значення змінної. Повертає на місце свого виклику тип значення змінної, вказаного після нього - рядок, в якому вказано тип.
+
+```ts
+let username;
+console.log(typeof username); // "undefined"
+
+let inputValue = null;
+console.log(typeof inputValue); // "object"
+
+const quantity = 17;
+console.log(typeof quantity); // "number"
+
+const message = "JavaScript is awesome!";
+console.log(typeof message); // "string"
+
+const isSidebarOpen = false;
+console.log(typeof isSidebarOpen); // "boolean"
+```
